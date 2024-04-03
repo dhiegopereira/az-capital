@@ -1,0 +1,11 @@
+version: 'version'
+
+services:
+  backend:
+    container_name: backend
+    image: node
+    restart: always
+    working_dir: /app
+    volumes:
+      - ./app:/app
+    command: sh -c 'npm install && npm run dev'
